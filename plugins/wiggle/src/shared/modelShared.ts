@@ -147,19 +147,6 @@ export default function SharedWiggleMixin(
 
       /**
        * #action
-       * this overrides the BaseLinearDisplayModel to avoid popping up a
-       * feature detail display, but still sets the feature selection on the
-       * model so listeners can detect a click
-       */
-      selectFeature(feature: Feature) {
-        const session = getSession(self)
-        if (isSelectionContainer(session)) {
-          session.setSelection(feature)
-        }
-      },
-
-      /**
-       * #action
        */
       setResolution(res: number) {
         self.resolution = res
