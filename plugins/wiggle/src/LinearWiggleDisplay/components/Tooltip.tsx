@@ -38,7 +38,7 @@ const TooltipContents = React.forwardRef<HTMLDivElement, Props>(
       </div>
     ) : (
       <div ref={ref}>
-        {loc}
+        {feature.get('trait')}
         <br />
         {`${toP(feature.get('score'))}`}
       </div>
